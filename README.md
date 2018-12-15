@@ -13,4 +13,4 @@ This sample application needs python3 libraries below.
 + jinja2
 
 ### Setting Database
-This application use Maria DB or MySQL. Please crate user and databses for application.
+This application use Maria DB or MySQL. Please create user and databses for application.
