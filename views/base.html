@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<HEAD>
+    <link href="/static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/common.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    {% block title %}
+    {% endblock %}
+</HEAD>
+<BODY>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand">READING RECORD</span>
+    </nav>
+    <main class="bd-content py-5 pl-3" role="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+</BODY>

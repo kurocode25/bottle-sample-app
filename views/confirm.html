@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>確認</title>
+{% endblock %}
+
+{% block content %}
+<form action="regist" method="POST">
+    <input type="hidden" value="{{form['name']}}" name="name" />
+    <input type="hidden" value="{{form['volume']}}" name="volume" />
+    <input type="hidden" value="{{form['author']}}" name="author" />
+    <input type="hidden" value="{{form['publisher']}}" name="publisher" />
+    <input type="hidden" value="{{form['memo']}}" name="memo" />
+    {% if registId %}
+        <input type="hidden" value="{{registId}}" name="id" />
+    {% endif %}
+    <div class="container">
+        <h3>登録情報の確認</h3>
+        <p>登録内容を確認して下さい</p>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <tr>
+                        {% for head in headers %}
+                        <th>{{head}}</th>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for data in form.values() %}
+                        <td>{{data}}</td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button class="btn btn-secondary" name="next" value="back">戻る</button>
+        <button class="btn btn-primary" name="next" value="regist">登録</button>
+    </div>
+</form>
+{% endblock %}
